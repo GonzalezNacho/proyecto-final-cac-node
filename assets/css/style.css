@@ -14,15 +14,27 @@
     font-family: 'system-ui', sans-serif;
 }
 
-header{
+/*header*/
+header {
     display: flex;
+    justify-content: space-between;
     color: var(--main-primary-text-color);
     background-color: var(--footer-bg-color);
+    padding: 1rem;
 }
+
+header nav {
+    display: flex;
+}
+
+/*main*/
 main {
     color: var(--main-primary-text-color);
     background-color: var(--main-bg-color);
 }
+
+
+/*footer*/
 footer {
     display: grid;
     align-items: center;

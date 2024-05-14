@@ -1,22 +1,33 @@
 /*prueba*/
+:root {
+    --footer-bg-color: #132042;
+    --main-bg-color: #0a1026;
+    --main-primary-text-color: #feffff;
+    --main-sercondary-text-color: #7290e6;
+    --footer-text-color: #6c6f78;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat';
+    font-family: 'system-ui', sans-serif;
 }
 
 header{
     display: flex;
-    color: aliceblue;
-    background-color: #0a0257;
+    color: var(--main-primary-text-color);
+    background-color: var(--footer-bg-color);
 }
-
+main {
+    color: var(--main-primary-text-color);
+    background-color: var(--main-bg-color);
+}
 footer {
     display: grid;
     align-items: center;
     height: 5vh;
     text-align: center;
-    color: aliceblue;
-    background-color: #0a0257;
+    color: var(--main-sercondary-text-color);
+    background-color: var(--footer-bg-color);
 }

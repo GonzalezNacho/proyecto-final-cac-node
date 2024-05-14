@@ -15,7 +15,7 @@ function renderizarLista(peliculas, lista) {
                     <img src="${element.Poster}" alt="">
                 </div>
                     <div class="info-peli">
-                    <h4>${element.Title}</h4>
+                    <h5>${element.Title}</h5>
                     <p>${element.Year}</p>
                 </div>
             </li>`

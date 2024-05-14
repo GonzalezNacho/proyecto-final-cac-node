@@ -1,1 +1,22 @@
 /*prueba*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+header{
+    display: flex;
+    color: aliceblue;
+    background-color: #0a0257;
+}
+
+footer {
+    display: grid;
+    align-items: center;
+    height: 5vh;
+    text-align: center;
+    color: aliceblue;
+    background-color: #0a0257;
+}

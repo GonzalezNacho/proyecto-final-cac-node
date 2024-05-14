@@ -15,6 +15,9 @@
 
 /*header*/
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     color: var(--main-primary-text-color);
@@ -78,6 +81,7 @@ header .nav-secundario .boton-buscar:hover {
 }
 /*main*/
 main {
+    margin-top: 64px;
     color: var(--main-primary-text-color);
     background-color: var(--main-bg-color);
 }

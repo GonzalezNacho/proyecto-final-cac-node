@@ -1,4 +1,3 @@
-/*prueba*/
 :root {
     --footer-bg-color: #132042;
     --main-bg-color: #0a1026;
@@ -48,6 +47,35 @@ header nav img {
     margin: 0 0.5rem;
 }
 
+header .nav-secundario {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .nav-secundario input {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin: 0 0.3rem;
+}
+
+header .nav-secundario input:focus {
+    outline: none;
+}
+
+header .nav-secundario input::placeholder {
+    color: var(--footer-text-color);
+}
+
+header .nav-secundario .boton-buscar {
+    color: #feffff;
+    background-color: var(--main-bg-color);
+}
+header .nav-secundario .boton-buscar:hover {
+    color: var(--main-bg-color);
+    background-color: var(--main-primary-text-color);
+}
 /*main*/
 main {
     color: var(--main-primary-text-color);

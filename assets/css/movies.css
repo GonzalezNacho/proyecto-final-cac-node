@@ -1,3 +1,47 @@
-ul li {
+main h1 {
+    text-align: center;
+}
+
+main section{
+    max-width: 1600px;
+    margin: auto;
+}
+
+main section h2 {
+    margin: 1rem;
+}
+
+main section ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main section ul li {
+    margin: 1rem;
     display: inline-block;
+}
+
+main section ul li div {
+    width: 300px;
+}
+
+main section ul li div img {
+    width: 100%;
+}
+
+main section ul li .info-peli {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+main section ul li .info-peli h5 {
+    margin: 0.5rem;
+}
+
+main section ul li div .info-peli p {
+    margin: 0.5rem;
 }

@@ -1,0 +1,6 @@
+main {
+    display: flex;
+    height: calc(95vh - 64px);
+    align-items: center;
+    justify-content: center;
+}

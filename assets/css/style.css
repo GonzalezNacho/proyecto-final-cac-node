@@ -25,6 +25,27 @@ header {
 
 header nav {
     display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--main-primary-text-color);
+}
+
+header nav ul li a:hover {
+    color: var(--main-sercondary-text-color);
+}
+
+header nav img {
+    margin: 0 0.5rem;
 }
 
 /*main*/

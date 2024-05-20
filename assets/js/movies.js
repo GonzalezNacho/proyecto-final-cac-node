@@ -1,5 +1,4 @@
-function generarListaDePeliculas(lista)  {
-    const url = './assets/mocks/results.json';
+export function generarListaDePeliculas(lista, url = './assets/mocks/results.json') {
     fetch(url)
         .then(respuesta => respuesta.json())
         .then(respuesta => {

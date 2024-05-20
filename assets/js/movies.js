@@ -1,18 +1,18 @@
 async function generarListaDePeliculas(lista)  {
     const url = './assets/mocks/results.json';
     const respuesta = await fetch(url);
-    const peliculas = await respuesta.json()
+    const peliculas = await respuesta.json();
     renderizarLista(peliculas.Search, lista);
 }
 
 function renderizarLista(peliculas, lista) {
     let pelicula = '';
-    const gallery = document.getElementById(lista);
+    const galeria = document.getElementById(lista);
     peliculas.forEach(element => {
         pelicula += ` 
             <li>
                 <div>
-                    <img src="${element.Poster}" alt="">
+                    <img src="${element.Poster}" alt="imagen de pelicula ${element.Title}">
                 </div>
                     <div class="info-peli">
                     <h5>${element.Title}</h5>
@@ -20,7 +20,7 @@ function renderizarLista(peliculas, lista) {
                 </div>
             </li>`
     });
-    gallery.innerHTML = pelicula;
+    galeria.innerHTML = pelicula;
 }
 
 const listas =['listaTop10','listaParaVos','listaSeries']

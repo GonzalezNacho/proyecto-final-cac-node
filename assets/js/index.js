@@ -1,13 +1,12 @@
-/*prueba*/
 document.getElementById('form-buscar').addEventListener('submit', (e) => {
     e.preventDefault();
     const busqueda = document.getElementById('input-buscar').value;
-    if (busqueda === '') {
-        alert('Por favor, introduce una palabra clave');
-    } else {
-        window.location.href = `./bilbioteca.html`
-        alert(`Buscando por: ${busqueda}`);
+    if (busqueda.length <= 3) {
+        alert(`Por favor, introduce una palabra clave de 3 o más caracteres ${busqueda} `);
         document.getElementById('input-buscar').value = '';
         document.getElementById('form-buscar').reset();
+    } else {
+        sessionStorage.setItem('busqueda', busqueda);
+        window.location.href = 'busqueda.html';
     }
-}) 
+})

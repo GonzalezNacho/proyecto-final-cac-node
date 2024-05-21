@@ -14,4 +14,8 @@ const busquedaDePelis =  async (busqueda) => {
 }
 
 const busqueda = sessionStorage.getItem('busqueda');
-busquedaDePelis(busqueda)
+if (busqueda) {
+    busquedaDePelis(busqueda)
+} else {
+    window.location.href = 'index.html';
+}

@@ -84,6 +84,7 @@ main {
     margin-top: 64px;
     color: var(--main-primary-text-color);
     background-color: var(--main-bg-color);
+    min-height: calc(95vh - 64px);
 }
 
 

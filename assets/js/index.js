@@ -6,7 +6,6 @@ document.getElementById('form-buscar').addEventListener('submit', (e) => {
         document.getElementById('input-buscar').value = '';
         document.getElementById('form-buscar').reset();
     } else {
-        sessionStorage.setItem('busqueda', busqueda);
-        window.location.href = 'busqueda.html';
+        window.location.href = `busqueda.html?search=${busqueda}`;
     }
 })

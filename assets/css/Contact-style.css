@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Signika+Negative:wght@300..700&display=swap');
+
+:root {
+    --footer-bg-color: #132042;
+    --main-bg-color: #0a1026;
+    --main-primary-text-color: #feffff;
+    --main-sercondary-text-color: #7290e6;
+    --footer-text-color: #6c6f78;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'system-ui', sans-serif;
+}
+
+/*header*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--main-primary-text-color);
+    background-color: var(--footer-bg-color);
+    padding: 1rem;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--main-primary-text-color);
+}
+
+header nav ul li a:hover {
+    color: var(--main-sercondary-text-color);
+}
+
+header nav img {
+    margin: 0 0.5rem;
+}
+
+header .nav-secundario {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .nav-secundario input {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin: 0 0.3rem;
+}
+
+header .nav-secundario input:focus {
+    outline: none;
+}
+
+header .nav-secundario input::placeholder {
+    color: var(--main-primary-text-color);
+}
+
+header .nav-secundario .boton-buscar {
+    color: #feffff;
+        background-color: var(--main-bg-color);
+
+}
+
+header .nav-secundario .boton-buscar:hover {
+    color: var(--main-bg-color);
+    background-color: var(--main-primary-text-color);
+}
+
+/*main*/
+main {
+    margin-top: 64px;
+    color: var(--main-primary-text-color);
+    background-color: var(--main-bg-color); 
+    min-height: calc(95vh - 64px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10px; 
+}
+
+form > input {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    width: 20rem;
+    height: 30px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+
+h1 {
+    font-family: 'Signika negative', Arial, Helvetica;
+    text-shadow: 2px 2px 2px black;
+    font-size: 45px;
+}
+
+.mainContainer > h1, p {
+    align-self: center;
+    color: white;
+    text-shadow: 10px;
+    font-family: 'signika negative', Arial;
+}
+
+.help {
+    height: 100px;
+}
+
+
+::placeholder {
+    color: white;
+    font-family: 'Radio Canada Big';
+}
+
+/*footer*/
+footer {
+    display: grid;
+    align-items: center;
+    height: 5vh;
+    text-align: center;
+    color: var(--main-sercondary-text-color);
+    background-color: var(--footer-bg-color);
+}
+
+
+
+
+

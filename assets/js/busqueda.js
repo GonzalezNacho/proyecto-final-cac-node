@@ -26,13 +26,10 @@ if (busqueda) {
 
 function paginacion(respuesta) {
     const paginacion = document.getElementById('paginacion');
+    let lista = '';
     const totalPaginas = Math.ceil(respuesta.totalResults / 10);
     for (let i = 1; i <= totalPaginas; i++) {
-        const li = document.createElement('li');
-        const link = document.createElement('a');
-        link.textContent = i;
-        link.href = `busqueda.html?search=${busqueda}&page=${i}`;
-        li.appendChild(link);
-        paginacion.appendChild(li);
+        lista += `<li><a href="busqueda.html?search=${busqueda}&page=${i}">${i}</a></li>`;
     }
+    paginacion.innerHTML = lista;
 }

@@ -18,7 +18,7 @@ export function renderizarLista(respuesta, lista) {
         pelicula += ` 
             <li>
                 <div>
-                    <img src="${element.Poster}" alt="imagen de pelicula ${element.Title}">
+                    <img src="${element.Poster== 'N/A' ? './assets/img/no-image.png' : element.Poster}" alt="imagen de pelicula ${element.Title}">
                 </div>
                     <div class="info-peli">
                     <h5>${element.Title}</h5>

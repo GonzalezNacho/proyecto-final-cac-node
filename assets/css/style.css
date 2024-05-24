@@ -53,6 +53,7 @@ header nav img {
 header .nav-secundario {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     gap: 1rem;
 }
 
@@ -79,6 +80,11 @@ header .nav-secundario .boton-buscar:hover {
     color: var(--main-bg-color);
     background-color: var(--main-primary-text-color);
 }
+
+#icono-nav {
+    display: none;
+}
+
 /*main*/
 main {
     margin-top: 64px;
@@ -96,4 +102,31 @@ footer {
     text-align: center;
     color: var(--main-sercondary-text-color);
     background-color: var(--footer-bg-color);
+}
+
+@media screen and (max-width:800px) {
+    header .nav-secundario{
+        display: none;
+    }
+
+    header nav ul {
+        gap: 5rem;
+    }
+}
+
+@media screen and (max-width:715px) {
+    header nav ul {
+        gap: 4rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    header nav ul{
+        display: none;
+    }
+
+    #icono-nav {
+        display: flex;
+        align-items: center;
+    }
 }

@@ -1,5 +1,4 @@
 export function generarListaDePeliculas(lista, url) {
-    console.log(url)
     const peticion = fetch(url)
         .then(respuesta => respuesta.json())
         .then(respuesta => {
@@ -12,13 +11,15 @@ export function generarListaDePeliculas(lista, url) {
 
 export function renderizarLista(respuesta, lista) {
     let pelicula = '';
+    document.getElementsByClassName('loader')[0].classList.add('loader-none');
     const galeria = document.getElementById(lista);
     const peliculas = respuesta.Search;
     peliculas.forEach(element => {
-        pelicula += ` 
+        const imagen = element.Poster== 'N/A' ? './assets/img/no-image.png' : element.Poster
+        pelicula += `
             <li>
                 <div>
-                    <img src="${element.Poster== 'N/A' ? './assets/img/no-image.png' : element.Poster}" alt="imagen de pelicula ${element.Title}">
+                    <img src="${imagen}" alt="imagen de pelicula ${element.Title}">
                 </div>
                     <div class="info-peli">
                     <h5>${element.Title}</h5>

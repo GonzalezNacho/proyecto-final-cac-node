@@ -19,10 +19,16 @@ header {
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     color: var(--main-primary-text-color);
     background-color: var(--footer-bg-color);
     padding: 1rem;
+}
+
+header div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header nav {
@@ -121,12 +127,32 @@ footer {
 }
 
 @media screen and (max-width:500px) {
-    header nav ul{
+    header nav {
         display: none;
     }
 
     #icono-nav {
         display: flex;
         align-items: center;
+        justify-content: flex-end;
+    }
+
+    #nav.responsive {
+        display: block;
+        background-color: var(--footer-bg-color);
+        width: 100%;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    nav.responsive ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav.responsive ul li {
+        margin: 5px 0;
     }
 }

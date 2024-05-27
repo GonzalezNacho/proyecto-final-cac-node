@@ -22,6 +22,7 @@ header {
     color: var(--main-primary-text-color);
     background-color: var(--footer-bg-color);
     padding: 1rem;
+    gap: 1rem;
 }
 
 header div {

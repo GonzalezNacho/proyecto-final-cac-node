@@ -10,6 +10,7 @@ function iniciar() {
         })
         .catch(error => console.error(error));
     }
+    document.getElementsByClassName('loader')[0].classList.add('loader-none');
 }
 
 iniciar()

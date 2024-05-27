@@ -1,14 +1,3 @@
-export function generarListaDePeliculas(lista, url) {
-    const peticion = fetch(url)
-        .then(respuesta => respuesta.json())
-        .then(respuesta => {
-            renderizarLista(respuesta, lista)
-        })
-        .catch(error => console.error(error));
-
-    return peticion;
-}
-
 export function renderizarLista(respuesta, lista) {
     let pelicula = '<ul id="resultados-pelis">';
     const galeria = document.getElementById(lista);

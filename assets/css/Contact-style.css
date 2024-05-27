@@ -23,10 +23,16 @@ header {
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     color: var(--main-primary-text-color);
     background-color: var(--footer-bg-color);
     padding: 1rem;
+}
+
+header div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header nav {
@@ -57,6 +63,7 @@ header nav img {
 header .nav-secundario {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     gap: 1rem;
 }
 
@@ -72,18 +79,20 @@ header .nav-secundario input:focus {
 }
 
 header .nav-secundario input::placeholder {
-    color: var(--main-primary-text-color);
+    color: var(--footer-text-color);
 }
 
 header .nav-secundario .boton-buscar {
     color: #feffff;
-        background-color: var(--main-bg-color);
-
+    background-color: var(--main-bg-color);
 }
-
 header .nav-secundario .boton-buscar:hover {
     color: var(--main-bg-color);
     background-color: var(--main-primary-text-color);
+}
+
+#icono-nav {
+    display: none;
 }
 
 /*main*/
@@ -114,6 +123,13 @@ form > input {
     margin-bottom: 10px;
 }
 
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 
 h1 {
     font-family: 'Signika negative', Arial, Helvetica;
@@ -122,20 +138,88 @@ h1 {
 }
 
 .mainContainer > h1, p {
-    align-self: center;
-    color: white;
-    text-shadow: 10px;
-    font-family: 'signika negative', Arial;
+    margin-bottom: 20px;
+    font-family: 'Signika negative', Arial, Helvetica;
 }
-
-.help {
-    height: 100px;
-}
-
 
 ::placeholder {
     color: white;
     font-family: 'Radio Canada Big';
+}
+
+/* Input container */
+.contact-form .input-container {
+  position: relative;
+  margin: 20px;
+}
+
+/* Input field */
+.contact-form .input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+}
+
+
+.contact-form .input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(255, 0, 0, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+
+.contact-form .input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+
+.contact-form .input-field:focus + .input-label {
+  top: -20px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.contact-form .input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+}
+
+
+.contact-form .input-field.help {
+  height: 100px; 
+}
+
+/* estilos de la clase "help" */
+/* .contact-form .help {
+  width: 20rem;
+  height: 100px;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  border: none;
+  color: white; */
+}
+
+.contact-form .input-field,
+.contact-form .help{
+    font-family: 'Radio Canada Big';
+  color: #ffffff; /* Color del texto */
+
 }
 
 /*footer*/
@@ -147,8 +231,3 @@ footer {
     color: var(--main-sercondary-text-color);
     background-color: var(--footer-bg-color);
 }
-
-
-
-
-

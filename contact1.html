@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="stylesheet" href="assets/css/Contact-style.css">
     <link rel="shortcut icon" href="./assets/img/claqueta/claquetaW32.png" type="image/x-icon">
     <title>peliculas</title>
@@ -37,15 +38,27 @@
 <div class="mainContainer">
         <h1>Contactanos ahora</h1>
         
-        
         <p> ¿Tenes alguna duda o consulta? Dejanos tu mensaje!</p> 
-                         <form>
-             <input type="text" placeholder="Nombre" /><br>
-            <input type="text" placeholder="Correo electronico" />
+             <form class="contact-form">
 
-            <input class="help" type="text" placeholder="¿En que podemos ayudarte?"> 
+            <!-- Input Nombre -->
+        <div class="input-container">
+            <input placeholder="Nombre" class="input-field" type="text" id="nombre"/>
+                 <label for="nombre" class="input-label">Nombre</label>
+             <span class="input-highlight"></span>
+        </div>
+  
+            <!-- Input Correo electronico -->
+        <div class="input-container">
+             <input placeholder="Correo electronico" class="input-field" type="text" id="correo"/>
+                <label for="correo" class="input-label">Correo electronico</label>
+             <span class="input-highlight"></span>
+        </div>
 
-                </form> 
+         
+<textarea class="textarea" placeholder="¿En que podemos ayudarte?"></textarea>
+</form>
+
 
 </div>
 

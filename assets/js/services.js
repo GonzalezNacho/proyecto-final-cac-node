@@ -10,8 +10,7 @@ export function generarListaDePeliculas(lista, url) {
 }
 
 export function renderizarLista(respuesta, lista) {
-    let pelicula = '';
-    document.getElementsByClassName('loader')[0].classList.add('loader-none');
+    let pelicula = '<ul id="resultados-pelis">';
     const galeria = document.getElementById(lista);
     const peliculas = respuesta.Search;
     peliculas.forEach(element => {
@@ -27,6 +26,7 @@ export function renderizarLista(respuesta, lista) {
                 </div>
             </li>`
     });
+    pelicula += '</ul>';
     galeria.innerHTML = pelicula;
 }
 

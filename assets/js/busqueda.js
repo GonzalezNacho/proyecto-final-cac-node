@@ -8,11 +8,17 @@ const busquedaDePelis =  async (busqueda, pagina) => {
     fetch(link)
         .then(respuesta => respuesta.json())
         .then(respuesta => {
-            renderizarLista(respuesta, 'resultados-pelis')
-            paginacion(respuesta,pagina)
+            if (respuesta.Response == 'True') {
+                renderizarLista(respuesta, 'resultados')
+                if (respuesta.totalResults > 10){
+                    paginacion(respuesta,pagina)
+                }
+            } else {
+                document.getElementById('resultados').innerHTML = `<h3>No se encontraron resultados</h3>`
+            }
+            document.getElementsByClassName('loader')[0].classList.add('loader-none');
         })
         .catch(error => console.error(error));
-    sessionStorage.removeItem('busqueda')
 }
 
 const busqueda = getParameterByName('search');
@@ -24,15 +30,14 @@ if (busqueda) {
 }
 
 function paginacion(respuesta,pagina) {
-    console.log(pagina)
     const totalPaginas = Math.ceil(respuesta.totalResults / 10);
     const previa = pagina == 1 ? 'disabled' : `href="busqueda.html?search=${busqueda}&page=${pagina - 1}"`;
     const posterior = pagina == totalPaginas ? 'disabled' : `href="busqueda.html?search=${busqueda}&page=${parseInt(pagina) + 1}"`;
     const paginacion = document.getElementById('paginacion');
-    let lista = `<li><a ${previa}><i class="fa-solid fa-angle-left"></i></a></li>`;
+    let lista = `<ul><li><a ${previa}><i class="fa-solid fa-angle-left"></i></a></li>`;
     for (let i = 1; i <= totalPaginas; i++) {
         lista += `<li><a href="busqueda.html?search=${busqueda}&page=${i}">${i}</a></li>`;
     }
-    lista += `<li><a ${posterior}><i class="fa-solid fa-angle-right"></i></a></li>`;
+    lista += `<li><a ${posterior}><i class="fa-solid fa-angle-right"></i></a></li></ul>`;
     paginacion.innerHTML = lista;
 }

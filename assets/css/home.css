@@ -1,13 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
-    text-decoration: none;
-    list-style: none;
-}
-
 body {
-    background-color: #030303;
     font-family: 'system-ui', sans-serif;
     color: #fff;
 }
@@ -17,57 +8,14 @@ body {
     margin: 0 auto;
 }
 
-.header {
-    background-image: url(img/bg.jpg);
+.header-content {
+    background-image: url(/assets/img/index/bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 70vh;
     display: flex;
     align-items: center;
-}
-
-.menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu .navbar ul li {
-    position: relative;
-    float: left;
-}
-
-.menu .navbar ul li a {
-    font-size: 22px;
-    padding: 20px;
-    color: #ffffff;
-    display: block;
-}
-
-.menu .navbar ul li a :hover {
-    color: #ff2f28;
-}
-
-#menu {
-    display: none;
-}
-
-.menu .icono {
-    width: 25px;
-}
-
-.menu label {
-    cursor: pointer;
-    display: none;
-}
-
-.header-content {
-    display: flex;
     width: 100%;
 }
 
@@ -82,21 +30,12 @@ body {
     width: 300px;
 }
 
-.header-2 {
-    width: 50%;
-    margin-top: 80px;
-    text-align: end;
+.header-1 h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
 }
 
-.btn-1 {
-    display: inline;
-    padding: 7px 20px;
-    background-color: #ff2f28;
-    color: #ffffff;
-    font-size: 20px;
-}
-
-.btn-2 {
+.btn {
     width: 110px;
     display: inline-block;
     padding: 7px 20px;
@@ -135,29 +74,19 @@ hr {
 .box-2,
 .box-3 {
     border-radius: 5px;
-    z-index: 1000;
     display: none;
 }
 
-.box-1:nth-child(1),
-.box-1:nth-child(2),
-.box-1:nth-child(3),
-.box-1:nth-child(4) {
+.box-1:nth-child(-n+4) {
     display: inline-block;
 }
 
 
-.box-2:nth-child(1),
-.box-2:nth-child(2),
-.box-2:nth-child(3),
-.box-2:nth-child(4) {
+.box-2:nth-child(-n+4){
     display: inline-block;
 }
 
-.box-3:nth-child(1),
-.box-3:nth-child(2),
-.box-3:nth-child(3),
-.box-3:nth-child(4) {
+.box-3:nth-child(-n+4) {
     display: inline-block;
 }
 

@@ -13,22 +13,22 @@ export function paginacion(respuesta, pagina, busqueda) {
             lista += `<li ${i == paginaNum ? 'class="active"' : ''}><a  href="busqueda.html?search=${busqueda}&page=${i}">${i}</a></li>`;
         }
     } else {
-        if (paginaNum <= 5) {
-            for (let i = 1; i <= 7; i++) {
+        if (paginaNum <= 3) {
+            for (let i = 1; i <= 4; i++) {
                 lista += `<li ${i == paginaNum ? 'class="active"' : ''}><a  href="busqueda.html?search=${busqueda}&page=${i}">${i}</a></li>`;
             }
             lista += tresPuntitos + ultimaPagina;
         }
-        else if (paginaNum > 5 && paginaNum < totalPaginas - 4) {
+        else if (paginaNum > 3 && paginaNum < totalPaginas - 2) {
             lista += primeraPagina + tresPuntitos;
-            for (let i = paginaNum - 2; i <= paginaNum + 2; i++) {
+            for (let i = paginaNum - 1; i <= paginaNum + 1; i++) {
                 lista += `<li ${i == paginaNum ? 'class="active"' : ''}><a  href="busqueda.html?search=${busqueda}&page=${i}">${i}</a></li>`;
             }
             lista += tresPuntitos +ultimaPagina;
         }
-        else if(paginaNum >= totalPaginas - 4) {
+        else if(paginaNum >= totalPaginas - 2) {
             lista += primeraPagina + tresPuntitos;
-            for (let i = totalPaginas - 6; i <= totalPaginas; i++) {
+            for (let i = totalPaginas - 4; i <= totalPaginas; i++) {
                 lista += `<li ${i == paginaNum ? 'class="active"' : ''}><a  href="busqueda.html?search=${busqueda}&page=${i}">${i}</a></li>`;
             }
         }

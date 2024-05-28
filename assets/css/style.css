@@ -53,8 +53,8 @@ header nav ul li a:hover {
     color: var(--main-sercondary-text-color);
 }
 
-header nav img {
-    margin: 0 0.5rem;
+header nav #busquedaMobile {
+    display: none;
 }
 
 header .nav-secundario {
@@ -114,6 +114,10 @@ footer {
 @media screen and (max-width:800px) {
     header .nav-secundario{
         display: none;
+    }
+
+    header nav #busquedaMobile {
+        display: block;
     }
 
     header nav ul {

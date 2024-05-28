@@ -1,4 +1,4 @@
-document.getElementById('form-buscar').addEventListener('submit', (e) => {
+document.getElementsByClassName('form-buscar').addEventListener('submit', (e) => {
     e.preventDefault();
     const busqueda = document.getElementById('input-buscar').value;
     if (busqueda.length < 3) {

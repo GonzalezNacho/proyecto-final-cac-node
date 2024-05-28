@@ -46,3 +46,50 @@ main section ul li div .info-peli p {
     margin: 0.5rem;
 }
 
+#paginacion {
+    display: flex;
+    justify-content: center;
+}
+
+#paginacion ul {
+    display: flex;
+    margin: 3rem 0;
+}
+#paginacion ul li {
+    margin: 0;
+    border: solid 1px var(--main-primary-text-color);
+    padding: 0.5rem;
+    background-color: var(--footer-bg-color);
+}
+
+#paginacion a {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    color: var(--main-primary-text-color);
+    text-decoration: none;
+}
+
+#paginacion li:hover {
+    cursor: pointer;
+    background-color: var(--main-sercondary-text-color);
+}   
+
+#paginacion li.active {
+    background-color: var(--main-primary-text-color);
+}
+
+#paginacion li.active a {
+    color: var(--footer-bg-color);
+    cursor: default;
+}
+
+#paginacion li.disabled {
+    background-color: var(--main-bg-color);
+    color: var(--main-primary-text-color);
+}
+
+#paginacion li.disabled a {
+    color: grey;
+    cursor: default;
+}

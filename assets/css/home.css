@@ -111,3 +111,32 @@ hr {
     color: #CFCFCF;
     font-size: 20px;
 }
+.content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width:500px) {
+    .box-container-1,
+    .box-container-2,
+    .box-container-3 {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    .header-1 img {
+        width: 200px;
+    }
+
+    .content img{
+        margin-bottom: 15px;
+    }
+
+    .content h3{
+        font-size: 15px;
+    }
+
+    .content{
+        font-size: 15px;
+    }
+}

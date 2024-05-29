@@ -117,8 +117,17 @@ h1 {
 .contact-form .help{
     font-family: 'Radio Canada Big';
   color: #ffffff; /* Color del texto */
-
 }
+
+.cbox{
+  margin-top: 30px;
+  align-self:normal;
+}
+
+.cbox label{
+  font-family: 'Signika negative', Arial, Helvetica;;
+}
+
 button {
   --primary-color: #ffff;
   --secondary-color: #002152;

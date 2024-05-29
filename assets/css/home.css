@@ -97,3 +97,17 @@ hr {
     display: inline-block;
     padding: 10px 25px;
 } 
+.content img{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.content h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.content{
+    color: #CFCFCF;
+    font-size: 20px;
+}

@@ -49,12 +49,14 @@ main section ul li div .info-peli p {
 #paginacion {
     display: flex;
     justify-content: center;
+    max-width: none;
 }
 
 #paginacion ul {
     display: flex;
     margin: 3rem 0;
 }
+
 #paginacion ul li {
     margin: 0;
     border: solid 1px var(--main-primary-text-color);
@@ -92,4 +94,18 @@ main section ul li div .info-peli p {
 #paginacion li.disabled a {
     color: grey;
     cursor: default;
+}
+
+@media screen and (max-width:500px) {
+    main section ul li div {
+        width: 200px;
+    }
+
+    #paginacion ul li {
+        padding: 0.25rem;
+    }
+
+    #paginacion a {
+        padding: 0.25rem;
+    }
 }

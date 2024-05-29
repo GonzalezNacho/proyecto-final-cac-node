@@ -4,7 +4,7 @@ for (const form of formsHtml) {
         e.preventDefault();
         const busqueda = form.children[0].value ;
         if (busqueda.length < 3) {
-            alert(`Por favor, introduce una palabra clave de 3 o más caracteres ${busqueda} `);
+            mostrarModal();
             form.children[0].value  = '';
         } else {
             window.location.href = `busqueda.html?search=${busqueda}`;
@@ -19,3 +19,20 @@ const menuResponsive = () => {
 }
 
 botonNav.addEventListener('click', menuResponsive);
+
+function mostrarModal() {
+    const modal = document.querySelector(".modal");
+    let contenidoModal =
+    `<div class="modal_container">
+        <i id="closeModal" class="fa-solid fa-circle-xmark"></i>
+        <h4>La busqueda debe tener 3 o mas caracteres</h4>
+    </div>`;
+    modal.innerHTML= contenidoModal;
+    modal.classList.add("modal--show");
+    document.getElementById('closeModal').addEventListener('click', cerrarModal);
+}
+
+function cerrarModal() {
+    const modal = document.querySelector(".modal");
+    modal.classList.remove("modal--show");
+}

@@ -152,12 +152,6 @@ button {
   margin-top: 30px;
 }
 
-button .arrow-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 button .arrow {
   margin-top: 1px;
   width: var(--arrow-width);
@@ -192,6 +186,9 @@ button:hover .arrow {
 button:hover .arrow:before {
   right: 0;
 }
+
+
+
 
 .warnings {
   color: #b36a7a;

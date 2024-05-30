@@ -1,6 +1,8 @@
 const nombre = document.getElementById("nombre");
 const email = document.getElementById("correo");
 const comentario = document.getElementById("comentario");
+const sexo = document.getElementById("sexo");
+const terminos = document.getElementById("cbox");
 const errores = document.getElementById("warnings");
 const form = document.getElementById("contact-form");
 
@@ -21,6 +23,15 @@ form.addEventListener("submit", function (event) {
         warnings += `El comentario debe ser mayor a 20 caracteres <br>`;
         tieneErrores = true;  
     }
+    if (!terminos.checked) {
+        warnings += `Debes aceptar los terminos y condiciones <br>`;
+        tieneErrores = true;
+    }
+    if(sexo.value == 0) {
+        warnings += `Debes seleccionar un sexo <br>`;
+        tieneErrores = true;
+    }
+    
     if (tieneErrores) {
         errores.innerHTML = warnings;
     } else {

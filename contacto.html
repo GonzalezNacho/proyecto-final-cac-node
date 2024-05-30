@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/Contact-style.css">
@@ -28,8 +30,8 @@
             </nav>
             <nav class="nav-secundario">
                 <form class="form-buscar">
-                    <input type="search" name="buscar" placeholder="Buscar" id="input-buscar"/>
-                    <input type="submit" value="¡Vamos!" class="boton-buscar"/>
+                    <input type="search" name="buscar" placeholder="Buscar" id="input-buscar" />
+                    <input type="submit" value="¡Vamos!" class="boton-buscar" />
                 </form>
             </nav>
         </div>
@@ -47,39 +49,38 @@
 
                 <!-- Input Nombre -->
                 <div class="input-container">
-                    <input placeholder="Nombre" class="input-field" type="text" id="nombre"/>
+                    <input placeholder="Nombre" class="input-field" type="text" id="nombre" />
                     <label for="nombre" class="input-label">Nombre</label>
                     <span class="input-highlight"></span>
                 </div>
 
                 <!-- Input Correo electronico -->
                 <div class="input-container">
-                    <input placeholder="Correo electronico" class="input-field" type="email" id="correo"/>
+                    <input placeholder="Correo electronico" class="input-field" type="email" id="correo" />
                     <label for="correo" class="input-label">Correo electronico</label>
                     <span class="input-highlight"></span>
                 </div>
 
-            
-        <div class="sexo">
-            <div class="select is-normal">
-                <select>
-                <option value="0">Selecciona tu sexo</option>
-                <option value="1">Hombre</option>
-                <option value="2">Mujer</option>
-                <option value="4">No binario</option>
-                <option value="5">Otro</option>
- 
-                </select>
-            </div>
-        </div>
+
+                <div class="sexo">
+                    <div class="select is-normal">
+                        <select name="sexo" id="sexo">
+                            <option value="0">Selecciona tu sexo</option>
+                            <option value="1">Hombre</option>
+                            <option value="2">Mujer</option>
+                            <option value="4">No binario</option>
+                            <option value="5">Otro</option>
+                        </select>
+                    </div>
+                </div>
 
                 <textarea class="textarea" placeholder="¿En que podemos ayudarte?" id="comentario"></textarea>
 
                 <div class="cbox">
-            <input type="checkbox" id="cbox">
-                <label for="cbox"> He leído y acepto los <a href="" target="">Términos y Política de privacidad.</a>
-    </label>
-</div>
+                    <input type="checkbox" id="cbox" value="first_checkbox">
+                    <label for="cbox"> He leído y acepto los <a href="" target="">Términos y Política de privacidad.</a>
+                    </label>
+                </div>
 
 
                 <button id="enviar" type="submit">
@@ -90,7 +91,7 @@
                 </button>
                 <p class="warnings" id="warnings"></p>
             </form>
-            
+
 
 
         </div>

@@ -179,17 +179,6 @@ button:hover {
   background-color: var(--hover-color);
 }
 
-button:hover .arrow {
-  background: var(--secondary-color);
-}
-
-button:hover .arrow:before {
-  right: 0;
-}
-
-
-
-
 .warnings {
   color: #b36a7a;
   text-align: center;

@@ -96,7 +96,19 @@ hr {
     margin: 40px 0;
     display: inline-block;
     padding: 10px 25px;
-} 
+    border-radius: 15px;
+    border: 1px solid #ff2f28;
+    color: #ff2f28;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.load-more:hover {
+    background-color: #ff2f28;
+    color: #ffffff;
+}
+
 .content img{
     width: 100%;
     margin-bottom: 15px;

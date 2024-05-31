@@ -158,13 +158,25 @@ footer {
     }
 
     header nav ul {
-        gap: 5rem;
+        gap: 4rem;
     }
 }
 
 @media screen and (max-width:715px) {
     header nav ul {
-        gap: 4rem;
+        gap: 2.5rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    header nav ul {
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+    header nav ul {
+        gap: 1rem;
     }
 }
 
